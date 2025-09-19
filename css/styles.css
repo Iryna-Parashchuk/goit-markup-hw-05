@@ -508,6 +508,7 @@ button {
   color: #fff;
   font-size: 12px;
   line-height: 2;
+  letter-spacing: 0.04em;
 }
 
 .subscribe-input::placeholder {
@@ -529,6 +530,8 @@ button {
   line-height: 1.5;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 165px;
+  letter-spacing: 0.04em;
 }
 
 .subscribe-button:hover,
@@ -538,6 +541,7 @@ button {
 
 .subscribe-icon {
   fill: #fff;
+  margin-left: 16px;
 }
 
 /* ===== Modal window ===== */
@@ -569,7 +573,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -627,7 +631,7 @@ button {
   padding-left: 38px;
   padding-right: 16px;
   outline: transparent;
-  transition: 0.3s border-color linear;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-icon {
@@ -635,7 +639,7 @@ button {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition: 0.3s stroke linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #2e2f42;
 }
 
@@ -648,7 +652,7 @@ button {
 }
 
 .modal-input-label {
-  display: inline-block;
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -662,6 +666,7 @@ button {
 
 .input-wrapper {
   position: relative;
+  margin-bottom: 16px;
 }
 
 .modal-textarea {
@@ -721,19 +726,25 @@ button {
 }
 
 .modal-btn {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  padding: 16px 32px;
+  padding: 0;
   width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
   color: #fff;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
